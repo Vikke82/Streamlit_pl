@@ -3,16 +3,16 @@ from sshtunnel import SSHTunnelForwarder
 import mysql.connector
 
 # Konfiguraatiot
-SSH_HOST = "staff.oamk.fi"
+SSH_HOST = st.secrets["SSH_HOST"]
 SSH_PORT = 22
-SSH_USER = "villemaj"
-SSH_PASSWORD = "M3r1h3lm1D4n13l"  # Vaihda salasanaan tai käytä ssh-avainta
+SSH_USER = st.secrets["SSH_USER"]
+SSH_PASSWORD = st.secrets["SSH_PASSWORD"]  # Vaihda salasanaan tai käytä ssh-avainta
 
-MYSQL_HOST = "mysli.oamk.fi"
+MYSQL_HOST = st.secrets["MYSQL_HOST"]
 MYSQL_PORT = 3306
-MYSQL_USER = "villemaj"
-MYSQL_PASSWORD = "hZUELZdD8Zg5pWTx"
-MYSQL_DATABASE = "opisk_villemaj"
+MYSQL_USER = st.secrets["MYSQL_USER"]
+MYSQL_PASSWORD = st.secrets["MYSQL_PASSWORD"]
+MYSQL_DATABASE = st.secrets["MYSQL_DATABASE"]
 
 # Funktio SQL-yhteyden luomiseksi SSH-tunnelin kautta
 @st.cache_resource
