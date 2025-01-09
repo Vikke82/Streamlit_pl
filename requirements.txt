@@ -1,2 +1,3 @@
 sshtunnel
-mysql-connector-python
+mysqlclient
+SQLAlchemy
