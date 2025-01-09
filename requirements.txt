@@ -1,4 +1,4 @@
 sshtunnel
 mysqlclient
 SQLAlchemy
-mysql.connector
+mysql
